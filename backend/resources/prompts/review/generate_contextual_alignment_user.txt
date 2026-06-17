@@ -1,0 +1,16 @@
+INPUTS:
+TARGET ROLE:
+<<<TARGET_ROLE>>>
+
+RAW JOB DESCRIPTION:
+<<<JOB_DESCRIPTION>>>
+
+RAW RESUME TEXT:
+<<<RESUME_TEXT>>>
+
+OUTPUT RULES:
+Return ONLY valid JSON.
+No markdown.
+No commentary.
+No explanations outside JSON.
+All fields must be present even if empty.

@@ -1,0 +1,13 @@
+INPUTS:
+CURRENT RESUME JSON:
+<<<CURRENT_RESUME_JSON>>>
+
+IMPROVEMENT SUMMARY ARRAY:
+<<<IMPROVEMENT_SUMMARY_ARRAY>>>
+
+OUTPUT RULES:
+Return ONLY valid JSON.
+No markdown.
+No commentary.
+No explanations outside JSON.
+All fields must be present even if empty.

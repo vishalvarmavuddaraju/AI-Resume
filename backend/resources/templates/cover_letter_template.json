@@ -1,0 +1,14 @@
+{
+  "format": {
+    "font_family": "Aptos",
+    "font_size_body": 12,
+    "font_size_header": 14,
+    "margin_top": 40,
+    "margin_left": 40,
+    "margin_right": 40,
+    "margin_bottom": 40,
+    "line_spacing": 1.15,
+    "page_size": "letter",
+    "paragraph_spacing": 10
+  }
+}

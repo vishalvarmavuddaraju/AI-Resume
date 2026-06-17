@@ -1,0 +1,13 @@
+INPUTS:
+JOB DESCRIPTION:
+<<<JOB_DESCRIPTION>>>
+
+RESUME (STRUCTURED JSON):
+<<<RESUME_JSON>>>
+
+OUTPUT RULES:
+Return ONLY valid JSON.
+No markdown.
+No commentary.
+No explanations outside JSON.
+All fields must be present even if empty.

@@ -1,0 +1,10 @@
+INPUT:
+JOB DESCRIPTION:
+<<<JOB_DESCRIPTION>>>
+
+OUTPUT RULES:
+Return ONLY valid JSON.
+No markdown.
+No commentary.
+No explanations outside JSON.
+All fields must be present even if empty.

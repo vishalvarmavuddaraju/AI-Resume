@@ -1,0 +1,175 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[parfill]{parskip}
+\usepackage{array}
+\usepackage{ifthen}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+
+\makeatletter
+
+%---------------- CUSTOM CLASS LOGIC ----------------%
+
+\def \name#1{\def\@name{#1}}
+\def \@name {}
+
+\def \addressSep {$\diamond$}
+
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+  \smallskip
+}
+
+\def \printname {
+  \begingroup
+    \hfil{\MakeUppercase{\Large\bf \@name}}\hfil
+    \bigskip\break
+  \endgroup
+}
+
+\AtBeginDocument{
+  \printname
+  \@ifundefined{@addressone}{}{\printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{\printaddress{\@addresstwo}}
+  \@ifundefined{@addressthree}{}{\printaddress{\@addressthree}}
+}
+
+\newenvironment{rSection}[1]{
+  \medskip
+  \MakeUppercase{\bf #1}
+  \medskip
+  \hrule
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+\newenvironment{rSubsection}[4]{
+ {\bf #1} \hfill {#2}
+ \ifthenelse{\equal{#3}{}}{}{
+  \\
+  {\em #3} \hfill {\em #4}
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em}
+   \itemsep -0.5em \vspace{-0.5em}
+  }{
+  \end{list}
+  \vspace{0em}
+}
+
+\makeatother
+
+%---------------- RESUME CONTENT ----------------%
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{Mandapati Sudarsana Varma}
+\address{+14704525472 \\ \href{mailto:mandapati@usf.edu}{mandapati@usf.edu} \\ \href{https://devvarma19.github.io/PortfolioApp/}{Website} \\ \href{https://www.linkedin.com/in/dev-varma-mvss/}{LinkedIn} \\ \href{https://github.com/DevVarma19}{GitHub}}
+
+\begin{document}
+
+\begin{rSection}{Summary}
+I am a Software Engineer with hands-on experience in full-stack development and data-driven solutions, currently pursuing a Masters degree in Computer Science. Proficient in JavaScript, Python, SQL, PowerBI, Azure Cloud Services, and PowerApps, I have optimized applications to handle 500,000 transactions daily and manage 10TB of data, improving performance by 25\%. I'm eager to contribute to innovative projects and learn from industry experts.
+\end{rSection}
+
+\begin{rSection}{Education}
+{\bf University of South Florida, Tampa} \hfill {\em August 2024 - May 2026}\\
+Master's in Computer Science. \\
+{\bf Lovely Professional University, Jalandhar} \hfill {\em August 2018 - May 2022}\\
+Bachelor of Engineering in Computer Science. \hfill { CGPA: \bf{8.14} }
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{3ex}} l }
+Programming/Scripting Languages & C++, Java, Python, JavaScript, TypeScript, SQL, DAX \\
+Frameworks/Libraries & React, Vue.js, Node.js, Express \\
+Data Tools & MySQL, MongoDB, SQL Server\\
+Cloud Technologies & Azure, Databricks, DataLake, DataFactory, Fabric\\
+Power Platform & Power BI, Power Apps, Power Automate\\
+Other Tools & Git, Docker, Postman, SSMS \\
+\end{tabular}
+\end{rSection}
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{MAQ Software - Software Engineer 1}{January 2024 - July 2024}{}{}
+\item Enhanced data processing speed and efficiency by 35\% using Databricks and Azure Data Factory, leveraging Apache Spark and Python to integrate diverse data sources into the Snowflake data warehouse.
+\item Improved data transformation and analysis efficiency by through the implementation of complex SQL queries on Microsoft SQL Server and Azure SQL Database.
+\item Decreased costs by 25\% through the optimization of data lifecycle management in Azure Data Lake Storage Gen2 and Blob Storage.
+\item Created PowerApps and PowerAutomate workflows, speeding up the budget, target, and forecast entry process by 40\%, leading to a 25\% reduction in processing time for BM.
+\item Led a POC for migrating a 100,000-line codebase from Azure Databricks and Azure Synapse to Fabric, validating feasibility and identifying potential cost optimization.
+
+\end{rSubsection}
+
+\begin{rSubsection}{Tikaj - Full Stack Developer}{March 2023 - January 2024}{}{}
+\item Engineered an EASM portal that aggregated cyber threat intelligence from over 50 sources and integrated 5 key security tools, enhancing data accessibility and improving digital threat management.
+\item Spearheaded the development of an internal reusable component library in Vue.js, cutting code duplication by 35\% and decreasing peer developer time spent on front-end tasks by 25\%
+\item Acquired comprehensive experience in all stages of development with a tech stack comprising Node.js, React.js, Vue.js, Python, MongoDB, SQL, and Redis, and optimized development workflows by implementing CI/CD pipelines.
+\item Collaborated in 50+ product development meetings and contributed to the hiring of 5 interns, facilitating team growth and ensuring project milestones were achieved on time.
+\\
+\end{rSubsection}
+
+\begin{rSubsection}{FIS Global - IT Trainee}{June 2022 - January 2023}{}{} 
+\item Employed hands-on experience with SpringBoot and Microservices architecture to design scalable applications, while leveraging SQL for efficient data management and integration.
+\item Improved application performance and data integrity by resolving  over 50 outdated dependencies in JAR files.
+
+\end{rSubsection}
+
+\begin{rSubsection}{MAQ Software - Software Intern}{March 2021 - March 2022}{}{}
+\item Acquired deep expertise in Big Data technologies, including PySpark, Python, Kusto and Azure Cloud Services, managing data sets exceeding 10TB and optimizing processing times by 20\%.
+\item Engineered data pipelines that extracted and transformed revenue data from 5 upstream sources, reducing data processing times by 30\%.
+\item Oversaw the end-to-end report development lifecycle, optimizing Power BI reports to achieve 40\% faster page load times, significantly improving user experience.
+\item Actively participated in daily stand-ups, sprint planning, retrospectives and client demos, ensuring effective communication and smooth delivery adhering to deadlines.
+
+\end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Projects}
+\begin{rSubsection} {Takedown Generator} {}{}{}
+\item Developed the TakeDownGenerator web app using ReactJS, automating takedown notice generation and reducing manual drafting effort by 75\%.
+\item Incorporated GPT-3.5 Turbo OpenAI API to generate precise, tailored  notices from user input, enhancing content accuracy by 50\%.
+\item Designed a user-friendly interface that streamlined input for diverse infringement scenarios.
+\end{rSubsection}
+\begin{rSubsection} {Breast Cancer Detection using CNN} {}{}{}
+\item Developed a CNN with TensorFlow and Keras, enhancing breast cancer classification accuracy by 15\% despite imbalanced data.
+\item Standardized the Wisconsin Breast Cancer dataset with Scikit-learn, ensuring consistent input and enhancing model reliability.
+\item Optimized model performance by integrating Conv1D, MaxPooling, BatchNormalization, and Dropout layers, decreasing overfitting and improving accuracy by 25\%.
+\end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Certifications} 
+\textbf{Microsoft Certified}: Fabric Analytics Engineer Associate - \href{https://learn.microsoft.com/api/credentials/share/en-us/MandapatiVarma/79FA7744283C6D62?sharingId=5C19EA4D7DF43118}{\raisebox{-0.2\height}\ \underline{Link}}
+
+\end{rSection}
+\begin{rSection}{Achievements} 
+ Health and People track Winner at Autumn Hacks II Hackathon.
+\item Solved 300+ coding problems on various platforms.
+\item 2x Spot Award winner at MAQ Software.
+\end{rSection}
+
+\end{document}

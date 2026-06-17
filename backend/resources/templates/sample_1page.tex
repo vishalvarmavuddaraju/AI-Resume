@@ -1,0 +1,185 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{xcolor}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear header and footer
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\bfseries\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure machine-readable PDF
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item[]
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{#2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+% Project heading command (keep)
+\newcommand{\resumeProjectHeading}[2]{%
+  \vspace{-3pt}\item[]
+    \begin{tabular*}{0.97\textwidth}[t]{l}
+      \textbf{#1} \textbar{} {\normalfont #2} \\
+    \end{tabular*}\vspace{-6pt}%
+}
+
+\begin{document}%----------HEADING-----------------
+\begin{center}
+  {\fontsize{18}{28}\selectfont \textbf{Varma Mandapati}}\\[0.25em]
+  4704525472 \textbar{} 
+  \href{mailto:varma.mandapati.3@gmail.com}{varma.mandapati.3@gmail.com} \textbar{}
+  \href{https://www.linkedin.com/in/varmamvss/}{LinkedIn} \textbar{} \href{https://github.com/DevVarma19}{GitHub} \textbar{} \href{https://mvarma.me}{Website}
+\end{center}
+
+%----------TECHNICAL SKILLS------------
+\section*{Technical Skills}
+\resumeSubHeadingListStart
+\setlength{\itemsep}{-1pt}
+\item{ \textbf{Languages \& Frameworks:} C\texttt{++}, Python, PySpark, Scala, SQL }
+\item{ \textbf{Big Data \& Cloud:} Apache Spark, Apache Airflow, AWS (Glue, S3, Lambda, Step Functions, ECS), Kafka }
+\item{ \textbf{Databases:} Redshift, DynamoDB, MySQL, MongoDB, Snowflake, Pinecone }
+\item{ \textbf{GenAI \& LLM Systems:} Prompt Engineering (zero-shot, few-shot, CoT), RAG, Graph RAG, Embedding Models, OpenAI, Claude, Gemini, Langchain, Ollama }
+\item{ \textbf{Certifications:} AWS Certified AI Practitioner, Azure Certified Fabric Analytics Engineer - Associate }
+\resumeSubHeadingListEnd
+\vspace{-0.2cm}
+
+%----------PROFESSIONAL EXPERIENCE------------
+\section*{Professional Experience}
+\resumeSubHeadingListStart
+
+%=== BEGIN_EXPERIENCE_ITEM ===
+  \resumeSubheading
+    {Amazon - Data Engineer Intern}{\textit{May, 2025 - Aug, 2025}}
+    {}{}
+    \vspace{-0.34cm}
+    \resumeItemListStart
+      \item Automated the metadata management pipeline in a large-scale AWS Glue Data Mesh by implementing AWS Step Functions workflows on ECS Fargate with Lambda and S3 integrations, reducing query latency by 30\% across 1,000+ tables.
+      \item Implemented orchestration workflows using AWS Step Functions and ECS Fargate to automate dataset refreshes and cut 90\% of manual data operations overhead for downstream engineering teams.
+      \item Migrated 100+ AWS Glue Catalog tables to Apache Iceberg to enable schema evolution, time-travel queries, and lower compute costs, and implemented data validation and integrity checks on the migrated datasets.
+      \item Leveraged internal Amazon AI tools (Q, Cline, Cedric) within the development workflow to accelerate feature delivery by 25\% while improving code quality, automated testing coverage, and long-term maintainability.
+    \resumeItemListEnd
+%=== END_EXPERIENCE_ITEM ===
+
+%=== BEGIN_EXPERIENCE_ITEM ===
+  \resumeSubheading
+    {ACME - Graduate Research Assistant}{\textit{Nov, 2024 - Present}}
+    {}{}
+    \vspace{-0.34cm}
+    \resumeItemListStart
+      \item Built a fault-tolerant, high-throughput data pipeline ingesting connected vehicle telemetry from pilot APIs into a centralized Mobility Data Platform, reliably processing over 10M messages for downstream analytics workflows.
+      \item Designed analytics-ready data models for vehicle, roadway, and event-level telemetry (RSU signals, traffic flow, incidents, derived predictions) to support efficient downstream consumption by analytics workflows.
+      \item Experimented with LLM-based summarization and retrieval models to analyze large-scale transportation telemetry documentation and extract domain-specific insights from unstructured sources.
+    \resumeItemListEnd
+%=== END_EXPERIENCE_ITEM ===
+
+%=== BEGIN_EXPERIENCE_ITEM ===
+  \resumeSubheading
+    {MAQ Software - Software Engineer}{\textit{Jan, 2024 - Jul, 2024}}
+    {}{}
+    \vspace{-0.34cm}
+    \resumeItemListStart
+      \item Orchestrated scalable data pipelines and ETL workflows using Azure Data Factory, Databricks, Apache Spark, and Snowflake to accelerate data processing time by 15\% and improve end-to-end reporting refresh time.
+      \item Enhanced Power BI dashboards by optimizing data queries and visuals to cut load times by 25\% and increase adoption among business stakeholders.
+      \item Optimized data lifecycle management policies in Azure Data Lake Gen2 and Blob Storage, tuning retention and tiering rules to achieve a 20\% reduction in storage-related costs.
+    \resumeItemListEnd
+%=== END_EXPERIENCE_ITEM ===
+
+\resumeSubHeadingListEnd
+\vspace{-0.2cm}
+%-----------PROJECTS-----------------
+\section*{Projects}
+\resumeSubHeadingListStart
+
+%=== BEGIN_PROJECT_ITEM ===
+\resumeProjectHeading{DocBot}{\textit{React, Python, FastAPI, LlamaIndex, OpenAI API, Pinecone}}
+\resumeItemListStart
+  \item Designed an end-to-end data pipeline to ingest, parse, and index unstructured documents into a searchable datastore, enabling scalable semantic retrieval across large document collections for downstream applications.
+  \item Designed and optimized prompt templates (zero-shot, few-shot, context-aware prompts) using evaluation benchmarks and response scoring to improve answer relevance by 35\%.
+  \item Integrated Pinecone vector store with hybrid retrieval (metadata + semantic search) and implemented chunking, embedding tuning, and retrieval threshold optimization to reduce hallucinations in generated responses.
+\resumeItemListEnd
+%=== END_PROJECT_ITEM ===
+
+%=== BEGIN_PROJECT_ITEM ===
+\resumeProjectHeading{StockSenseAI}{\textit{Python, OpenAI API, Gemini API, Yahoo Finance, Prompt Engineering}}
+\resumeItemListStart
+  \item Architected an LLM-powered stock analysis engine in Python that processes 20+ financial signals per symbol (prices, earnings, news), reducing manual research time by 80\% and generating investor briefs in under 10 seconds.
+  \item Designed a provider-agnostic abstraction layer for OpenAI and Gemini APIs with retry logic and cost-aware routing, achieving 99\%+ API reliability and reducing inference cost by 25\%.
+  \item Engineered token-optimized prompt construction combining structured financial data and deduplicated news, reducing prompt size by 30\% while improving response consistency.
+  \item Automated deterministic report formatting and email delivery for scheduled summaries, eliminating manual reporting tasks.
+\resumeItemListEnd
+%=== END_PROJECT_ITEM ===
+
+\resumeSubHeadingListEnd
+\vspace{-0.2cm}
+
+%---------PUBLICATIONS SECTION---------
+\section*{Publications}
+\resumeSubHeadingListStart
+\item Optimizing Access to Interoperability Resources in Mobility Through Context-Aware Large Language Models (LLMs) {\textit{Applied AI Research, LLMs, RAG, OpenAI APIs, Case Study Analysis}} \textbar{} {\em{\textbf{MDPI}, Dec, 2025}}
+\resumeSubHeadingListEnd
+\vspace{-0.2cm}
+
+%-----------EDUCATION-----------------
+\section*{Education}
+\resumeSubHeadingListStart
+
+%=== BEGIN_EDUCATION_ITEM ===
+  \resumeSubheading
+    {University of South Florida}{\textit{Aug, 2024 - May, 2026}}
+    {Master of Science in Computer Science}{}
+
+    \textbf{Coursework:} Generative AI, Agentic AI, NLP, Machine Learning, Operating Systems, Computer Architecture
+%=== END_EDUCATION_ITEM ===
+
+\resumeSubHeadingListEnd
+\end{document}

@@ -1,0 +1,8 @@
+INPUTS:
+LATEX TEMPLATE:
+<<<LATEX_TEMPLATE>>>
+
+RESUME JSON:
+<<<RESUME_JSON>>>
+
+Fill the LaTeX template with the resume content above. Maintain the exact template structure and only fill in the content.
